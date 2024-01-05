@@ -741,13 +741,13 @@ function void m04_simd_axi_fill_memory (
   base_ptr = ptr; //Load_vmem1
   while (! $feof(file_simddata1)) begin
     $fscanf(file_simddata1,"%d\n",read_sdata);  // without this it goes into an infinite loop. Read and discard the value
-    m04_simd_axi.mem_model.backdoor_memory_write_4byte(base_ptr + axi04_simd_ld_ptr_offset0 + (slot1 * 4), read_sdata);
+    m04_simd_axi.mem_model.backdoor_memory_write_4byte(base_ptr + axi04_simd_ld_ptr_offset1 + (slot1 * 4), read_sdata);
     slot1++;
   end 
   
   while (! $feof(file_simddata2)) begin
     $fscanf(file_simddata2,"%d\n",read_sdata);  // without this it goes into an infinite loop. Read and discard the value
-    m04_simd_axi.mem_model.backdoor_memory_write_4byte(base_ptr + axi04_simd_ld_ptr_offset1 + (slot2 * 4), read_sdata);
+    m04_simd_axi.mem_model.backdoor_memory_write_4byte(base_ptr + axi04_simd_ld_ptr_offset2 + (slot2 * 4), read_sdata);
     slot2++;
   end 
   
