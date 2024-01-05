@@ -25,7 +25,6 @@
     bit [63:0] vmem_ptr2_st                        = axi04_simd_addr+axi04_simd_st_ptr_offset2;
 
 
-    bit last_layer_obuf                            = 1;
     integer instr_filep   = $fopen("./path_to_compiled_test_folder/layer0_conv_bias_relu1/conv_bias_relu1_decimal.txt","r"); 
     integer instr_filep1  = $fopen("./path_to_compiled_test_folder/layer0_conv_bias_relu1/conv_bias_relu1_decimal.txt","r"); 
 
